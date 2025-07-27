@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    },
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "image": "https://yourdomain.com/para911-thumbnail.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Binaya Mishra"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Para911 Project",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yourdomain.com/logo.png"
+      }
+    },
+    "datePublished": "{{ page.date }}",
+    "dateModified": "{{ page.date }}",
+    "keywords": "{{ page.keywords }}"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>&copy; 2025 Para911 Project</p>
+  </footer>
+</body>
+</html>
